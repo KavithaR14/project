@@ -1,0 +1,96 @@
+/* TimeSlotSelection.css */
+
+.time-slot-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.heading {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.date-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.date-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.date-button:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.date-button.selected {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.slot-section {
+    text-align: center;
+}
+
+.slot-heading {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #495057;
+}
+
+.time-slots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.time-button {
+    padding: 8px 15px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #28a745;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.time-button:hover {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.time-button.selected {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.selected-info {
+    font-size: 1.2rem;
+    color: #495057;
+}
+
+.select-info {
+    font-size: 1rem;
+    color: #6c757d;
+}
