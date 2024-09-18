@@ -1,5 +1,8 @@
 // src/components/DoctorProfile.js
 import React from "react";
+import './Doctor.css';
+
+
 // Assuming your CSS is in App.css
 
 const DoctorProfile = ({ doctor }) => (

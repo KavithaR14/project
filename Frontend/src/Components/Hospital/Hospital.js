@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import './Hospital.css';
+
 
 function Hospital() {
   const [location, setLocation] = useState("");
@@ -138,3 +140,5 @@ function Hospital() {
 }
 
 export default Hospital;
+
+	

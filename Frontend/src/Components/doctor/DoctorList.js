@@ -1,9 +1,7 @@
 import React from "react";
 import DoctorProfile from './DoctorProfile';
-
-
-
-
+import Filters from "./Filters";
+import './Doctor.css';
 const doctors = [
   {
      imgSrc:
@@ -149,11 +147,16 @@ const doctors = [
 
 function DoctorList() {
   return (
+    <>
+    <Filters/>
+    
     <div className="doctor-profiles">
       {doctors.map((doctor, index) => (
         <DoctorProfile key={index} doctor={doctor} />
+        
       ))}
     </div>
+    </>
   );
 }
 
