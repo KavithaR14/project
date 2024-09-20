@@ -1,0 +1,47 @@
+.hero-section1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  max-width: 700px;
+  height: 70vh;
+  background-color: #4a61f6;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+.hero-section1 > div {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  max-width: 800px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.hero-section1 h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: white;
+  text-align: left;
+  max-width: 400px;
+}
+
+.hero-section1 button {
+  background-color: white;
+  color: #4a61f6;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.hero-section1 img {
+  max-width: 381%;
+  width: 500px;
+  height: auto;
+  margin-left: 15px;
+}

@@ -1,0 +1,100 @@
+
+/* src/Login.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  /* background: url('https://tu-dresden.de/gesundheit/ressourcen/bilder/Ganzheitliche_Vorsorge_panthermedia_B133282786_3455x3236.jpg/@@images/ac7e1948-0938-431e-9185-1ff0ce250ce6.jpeg') no-repeat center center fixed; */
+  background-size: cover;
+  image-rendering: crisp-edges;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.login-box {
+  background-color: rgb(255, 255, 255); /* Semi-transparent background */
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #2080b9;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  width: 93%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #CECECE;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2080b9;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #1e3a81;
+}
+
+.or-text {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 16px;
+  color: #000;
+}
+
+.signup-button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2080b9;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signup-button:hover {
+  background-color: #1e3a81;
+}
+
+a {
+  color: #2080b9; /* Link color based on theme */
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+}
+
+a:hover {
+  color: #1e3a81;
+}

@@ -1,0 +1,54 @@
+.speciality-section {
+  text-align: center;
+  padding: 50px;
+}
+
+.speciality-section h2 {
+  font-size: 2.5rem;
+  color: #1e3a81;
+  margin-bottom: 10px;
+}
+
+.speciality-section p {
+  font-size: 1rem;
+  color: #2080b9;
+  margin-bottom: 40px;
+}
+
+.speciality-section .specialities {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensure images wrap if the row is too wide */
+  gap: 30px; /* Adjust gap between images */
+}
+
+.speciality-section div {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #1e3a81;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.speciality-section div:hover {
+  background-color: #e0e0e0;
+}
+
+.speciality-section img {
+  max-width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.speciality-section span {
+  font-size: 0.9rem;
+  color: #333;
+}

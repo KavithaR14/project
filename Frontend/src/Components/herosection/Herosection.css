@@ -1,0 +1,43 @@
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2080b9;
+  padding: 50px;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+.book-btn {
+  background-color: white;
+  color: #2080b9;
+  padding: 15px 30px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-content .intro-text {
+  display: flex;
+  align-items: center;
+}
+
+.hero-content .group-profiles-img {
+  margin-right: 15px;
+  width: 150px;
+  height: 50px;
+}

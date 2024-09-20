@@ -1,28 +1,27 @@
-// server.js
+const mongoose = require('mongoose');
 const express = require('express');
-require('dotenv').config();
-const cors = require('cors');
-const connectDB = require('./config/db');
-const itemController = require('./controllers/itemController');
-const itemRouter = require('./routes/itemRoute');
-const itemModel = require('./models/itemModel');
-
-require('dotenv').config();
-
 const app = express();
-const PORT = process.env.PORT || 5001;
 
-// Connect to MongoDB
-connectDB();
+// Load environment variables
+require('dotenv').config();
+
+
+// Use the actual MongoDB URI from .env file
+const mongoURI = process.env.MONGO_URI;
+
+// const connectDB = require('./config/db');
+
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('MongoDB connected'))
+    .catch(err => console.log('MongoDB connection error:', err));
 
 // Middleware
-app.use(cors());
 app.use(express.json());
 
-// Routes
-app.use('/api/items', itemRouter);
+
 
 // Start Server
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+const port = process.env.PORT || 5004;
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
 });

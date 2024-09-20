@@ -1,78 +1,33 @@
-/* General Styles */
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+/* Homepage container styles */
+.homepage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the homepage takes up the full height of the viewport */
+}
+
+/* Ensure that sections take up full width and are properly spaced */
+.homepage > * {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Optional: Add spacing between sections */
+.homepage > *:not(:last-child) {
+  margin-bottom: 20px; /* Adjust spacing as needed */
+}
+
+/* Specific styles if needed for layout adjustments */
+/* .hero-section,
+.hero-section1,
+.speciality-section,
+.footer {
+  /* Add any additional styling needed for layout */
+/* } */ 
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .homepage > * {
+    margin-bottom: 10px; /* Adjust spacing for smaller screens */
   }
-  
-  .homepage-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: space-between;
-  }
-  
-  /* Navbar Styles */
-  .navbar {
-    background-color: #0073e6;
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbar-title {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .navbar-nav {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .nav-button {
-    padding: 10px 20px;
-    background-color: white;
-    color: #0073e6;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .nav-button:hover {
-    background-color: #005bb5;
-    color: white;
-  }
-  
-  /* Main Content Styles */
-  .main-content {
-    padding: 40px;
-    text-align: center;
-    background-color: white;
-  }
-  
-  .main-content h2 {
-    font-size: 36px;
-    color: #333;
-  }
-  
-  .main-content p {
-    font-size: 18px;
-    color: #666;
-    margin-top: 10px;
-  }
-  
-  /* Footer Styles */
-  .footer {
-    background-color: #0073e6;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-size: 14px;
-  }
-  
+}

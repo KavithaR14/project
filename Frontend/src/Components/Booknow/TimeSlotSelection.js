@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import '../Booknow/TimeSlotSelection.css';  // Ensure your styles are in the right path
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import '../Booknow/TimeSlotSelection.css';
+import { FaCalendarAlt, FaClock } from 'react-icons/fa'; // Import icons
 
 const TimeSlotSelection = () => {
     const [selectedDate, setSelectedDate] = useState(null);
     const [selectedSlot, setSelectedSlot] = useState(null);
+    const navigate = useNavigate(); // Initialize useNavigate
 
-    // Available dates and their respective time slots
     const availableSlots = {
         '26 Aug': ['09:00 AM', '10:00 AM', '11:00 AM', '01:00 PM', '03:00 PM'],
         '27 Aug': ['12:00 PM', '02:00 PM', '04:00 PM', '05:00 PM'],
@@ -16,27 +18,33 @@ const TimeSlotSelection = () => {
 
     const handleDateChange = (date) => {
         setSelectedDate(date);
-        setSelectedSlot(null); // Reset the selected time slot when the date changes
+        setSelectedSlot(null);
+    };
+
+    const handleConfirmAppointment = () => {
+        // Navigate to the Login page
+        navigate('/login');
     };
 
     return (
         <div className="time-slot-selection">
-            <h2 className="heading">Select a Time Slot for Your Appointment</h2>
+            <h2 className="heading">Select a Time Slot</h2>
 
             {/* Date Selection */}
             <div className="date-selection">
                 {Object.keys(availableSlots).map((date, index) => (
-                    <button 
-                        key={index} 
-                        className={`date-button ${selectedDate === date ? 'selected' : ''}`}
-                        onClick={() => handleDateChange(date)}
-                    >
-                        {date}
-                    </button>
+                    <div className="date-card" key={index}>
+                        <button 
+                            className={`date-button ${selectedDate === date ? 'selected' : ''}`}
+                            onClick={() => handleDateChange(date)}
+                        >
+                            <FaCalendarAlt /> {date}
+                        </button>
+                    </div>
                 ))}
             </div>
 
-            {/* Time Slots */}
+            {/* Time Slot Selection */}
             <div className="slot-section">
                 {selectedDate ? (
                     <>
@@ -48,13 +56,18 @@ const TimeSlotSelection = () => {
                                     className={`time-button ${selectedSlot === time ? 'selected' : ''}`}
                                     onClick={() => setSelectedSlot(time)}
                                 >
-                                    {time}
+                                    <FaClock /> {time}
                                 </button>
                             ))}
                         </div>
                         <p className="selected-info">
                             {selectedSlot ? `Selected Time: ${selectedSlot}` : "Please select a time"}
                         </p>
+                        {selectedSlot && (
+                            <button className="confirm-button" onClick={handleConfirmAppointment}>
+                                Confirm Appointment
+                            </button>
+                        )}
                     </>
                 ) : (
                     <p className="select-info">Please select a date to view available slots</p>
