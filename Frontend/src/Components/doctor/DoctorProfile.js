@@ -20,6 +20,10 @@ const DoctorProfile = ({ doctor }) => {
         <h2>{doctor.name}</h2>
         <p>Specialization: {doctor.specialization}</p>
         <p>Rating: {doctor.rating}/5</p>
+        <p>Gender: {doctor.gender} </p>
+        <p>Hospital: {doctor.hospital}</p>
+        <p>Experience: {doctor.experience}</p>
+
         <p>Location: {doctor.location}</p> {/* Display the location here */}
         <button className="view-profile" onClick={handleViewProfileClick}>
           View Profile

@@ -19,11 +19,10 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap; /* Ensure images wrap if the row is too wide */
-  gap: 30px; /* Adjust gap between images */
+  gap: 80px; /* Adjust gap between images */
 }
 
 .speciality-section div {
-  background-color: #f2f2f2;
   padding: 20px;
   border-radius: 50%;
   width: 120px;
@@ -38,17 +37,14 @@
   transition: all 0.3s ease;
 }
 
-.speciality-section div:hover {
-  background-color: #e0e0e0;
-}
-
 .speciality-section img {
   max-width: 80px;
   height: auto;
   margin-bottom: 10px;
 }
 
-.speciality-section span {
+/* .speciality-section span {
   font-size: 0.9rem;
   color: #333;
-}
+} */
+

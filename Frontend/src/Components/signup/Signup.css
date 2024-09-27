@@ -1,0 +1,108 @@
+/* Signup.css */
+
+/* The container for the entire signup page */
+.signuppage {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://i.pinimg.com/474x/b4/36/da/b436dae34dbbc0bf70f7a1d4b3f6e34c.jpg'); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  }
+  
+  /* Center the signup form in the page */
+  .signupcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+  
+  /* Styling for the form itself */
+  .form {
+    background-color: rgba(255, 255, 255, 0.9); /* Light background with slight transparency */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Heading style */
+  .form h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+    font-size: 2em;
+    color: #1e3a81; /* Theme color */
+    font-weight: 600;
+    margin-left: 100px;
+  }
+  
+  /* Input field styling */
+  .input {
+    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 2px solid #CECECE;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Change border color when input is focused */
+  .input:focus {
+    border-color: #2080b9; /* Theme color for focus state */
+  }
+  
+  /* Button style */
+  .button {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1e3a81; /* Primary theme color */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for the button */
+  .button:hover,
+  .buttonHover {
+    background-color: #2080b9; /* Darker theme color on hover */
+  }
+  
+  /* Text for the login prompt */
+  .text {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 1em;
+    color: #000;
+  }
+  
+  /* Styling for the signup/login link */
+  .link {
+    color: #1e3a81; /* Theme color for links */
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  /* Hover effect for the link */
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive behavior for smaller screens */
+  @media (max-width: 768px) {
+    .form {
+      width: 100%;
+      margin: 0 20px; /* Add margin for better appearance on smaller screens */
+    }
+  }

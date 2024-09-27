@@ -1,27 +1,32 @@
-const mongoose = require('mongoose');
 const express = require('express');
-const app = express();
-
-// Load environment variables
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 require('dotenv').config();
 
+const authRoutes = require('./routes/authRoutes');
+const adminlogin = require('./routes/adminlogin'); 
+const appointmentRoutes = require('./routes/appointmentRoutes');
 
-// Use the actual MongoDB URI from .env file
-const mongoURI = process.env.MONGO_URI;
+// const appointmentRoutes = require('./routes/appointmentRoutes');
 
-// const connectDB = require('./config/db');
-
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('MongoDB connected'))
-    .catch(err => console.log('MongoDB connection error:', err));
-
-// Middleware
+const app = express();
 app.use(express.json());
+app.use(cors({ origin: 'http://localhost:3000' })); // Adjust the origin as needed
 
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+  .then(() => console.log('Connected to MongoDB Atlas'))
+  .catch((error) => console.error('Error connecting to MongoDB:', error));
 
+app.use('/api/auth', authRoutes);
+// app.use('/api', appointmentRoutes);
+app.use('/api/admin', adminlogin); 
+app.use('/api', appointmentRoutes);
 
-// Start Server
-const port = process.env.PORT || 5004;
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+const PORT = process.env.PORT || 5004;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });

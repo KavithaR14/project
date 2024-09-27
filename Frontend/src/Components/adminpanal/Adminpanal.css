@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+.admin-container {
+  display: flex;
+  width: 100%;
+}
+
+.admin-sidebar {
+  background-color: #1e3a81; /* Darker theme color for sidebar */
+  width: 250px;
+  height: 130vh;
+  padding: 20px;
+  color: white;
+}
+
+.admin-profile {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.admin-profile .profile-img {
+  width: 140px;
+  height: 130px;
+  border-radius: 50%;
+}
+
+.admin-profile h3 {
+  margin-top: 10px;
+}
+
+.today-report {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2080b9; /* Lighter theme color for report section */
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.today-report div {
+  text-align: center;
+}
+
+.admin-nav ul {
+  list-style-type: none;
+}
+
+.admin-nav ul li {
+  margin-bottom: 15px;
+}
+
+/* Style the buttons to look like links */
+.admin-nav ul li button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  background-color: #1e3a81; /* Darker theme color for button */
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.admin-nav ul li button:hover {
+  background-color: #2080b9; /* Lighter theme color on hover */
+}
+
+.admin-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f4f4f4; /* Match the body background color */
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.admin-header h2 {
+  color: #333;
+}
+
+.add-event-btn {
+  background-color: #2080b9; /* Button color with lighter theme color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#calendar {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

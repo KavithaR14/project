@@ -1,98 +1,99 @@
-.hospital-page {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    background-image: url('https://wallpaperaccess.com/full/4112935.png'); /* Add your background image URL */
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .hospital-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 20px;
-  }
-  
-  
-  .search-bar {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .search-bar input {
-    padding: 10px;
-    font-size: 16px;
-    width: 45%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .search-bar button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .hospital-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .hospital-container {
-    display: flex;
-    align-items: flex-start;
-    background-color: #acb9c2;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .hospital-image {
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-    margin-right: 20px;
-    border-radius: 10px;
-  }
-  
-  .hospital-details {
-    flex-grow: 1;
-  }
-  
-  .hospital-details h3 {
-    margin: 0;
-    font-size: 20px;
-    color: #020101;
-  }
-  
-  .hospital-details p {
-    margin: 10px 0;
-    font-size: 16px;
-    color: #000000;
-  }
-  
-  .details-button {
-    padding: 10px 50px;
-    margin-right: 10px;
-    font-size: 14px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .details-button:hover,
-  .view-number-button:hover {
-    background-color: #0056b3;
-  }
-  
+.hospital-head {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-image: url('https://wallpaperaccess.com/full/4112935.png'); /* Background image URL */
+  background-size: cover;
+  background-position: center;
+  color: #000000;
+}
+.hospital-head h4{
+  color: #000000;
+  margin-bottom: 10px;
+}
 
-	
+.hospital-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #000000;
+
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 10px; /* Adjusts the spacing between input fields and button */
+  color: #000000;
+}
+
+.search-bar input {
+  padding: 10px;
+  font-size: 16px;
+  flex: 1; /* Ensures that the input fields take up equal space */
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  flex-shrink: 0; /* Prevents the button from shrinking */
+  margin-bottom: 8px;
+}
+
+.hospital-container {
+  display: flex;
+  align-items: flex-start;
+  background-color: #acb9c2;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hospital-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.hospital-details {
+  flex-grow: 1;
+}
+
+.hospital-details h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #020101;
+}
+
+.hospital-details p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #000000;
+}
+
+.details-button {
+  padding: 10px 50px;
+  margin-right: 10px;
+  font-size: 14px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.details-button:hover,
+.view-number-button:hover {
+  background-color: #0056b3;
+}

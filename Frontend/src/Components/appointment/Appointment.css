@@ -1,0 +1,160 @@
+.appointment-page {
+  font-family: 'Arial', sans-serif;
+  background-image: url("https://i.pinimg.com/564x/2b/35/8b/2b358b93696efaf07361e3d6e88685d7.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.appointment-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  margin: left 600px;
+}
+
+.appointment-box {
+  width: 100%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #2080b9;
+  margin-bottom: 20px;
+}
+
+.appointment-box h2 {
+  text-align: center;
+  color: #2080b9;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Input Fields */
+.appointment-page .input {
+  margin-bottom: 20px;
+}
+
+.appointment-page label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #2080b9;
+}
+
+.appointment-page input[type="text"],
+.appointment-page input[type="number"],
+.appointment-page input[type="email"],
+.appointment-page input[type="date"],
+.appointment-page input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #2080b9;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.appointment-page input[type="text"]:focus,
+.appointment-page input[type="number"]:focus,
+.appointment-page input[type="email"]:focus,
+.appointment-page input[type="date"]:focus,
+.appointment-page input[type="time"]:focus {
+  border-color: #1e3a81;
+  box-shadow: 0 0 8px rgba(33, 150, 243, 0.3);
+}
+
+/* Radio Buttons */
+.appointment-page .radio-group {
+  margin-bottom: 20px;
+}
+
+.appointment-page .radio-group label,
+.appointment-page .radio-group input {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Submit Button */
+.appointmen-tpage .submit button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2080b9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.appointment-page .submit button:hover {
+  background-color: #1e3a81;
+  transform: translateY(-2px);
+}
+
+.appointment-page .submit button:active {
+  transform: translateY(0);
+}
+
+/* Highlight Input */
+.appointmentpage .highlight {
+  border-color: #ff0000;
+  background-color: #ffe5e5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .appointment-page .appointment-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .appointment-page h2 {
+    font-size: 22px;
+  }
+
+  .appointment-page input[type="text"],
+  .appointment-page input[type="number"],
+  .appointment-page input[type="email"],
+  .appointment-page input[type="date"],
+  .appointment-page input[type="time"] {
+    font-size: 14px;
+  }
+
+  .appointment-page .submit button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .appointment-page .appointment-box {
+    padding: 15px;
+  }
+
+  .appointment-page input[type="text"],
+  .appointment-page input[type="number"],
+  .appointment-page input[type="email"],
+  .appointment-page input[type="date"],
+  .appointment-page input[type="time"] {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .appointment-page h2 {
+    font-size: 20px;
+  }
+}

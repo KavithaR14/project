@@ -1,51 +1,81 @@
-// src/Login.js
-import React from 'react';
-import './Login.css';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import './Login.css';
 
-function Login() {
-  const navigate = useNavigate(); // Initialize useNavigate
+const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    // Simulating a successful login (you can add authentication logic here)
-    const username = e.target.username.value;
-    const password = e.target.password.value;
+    try {
+      const response = await fetch('http://localhost:5004/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }), // Send email and password as JSON
+      });
 
-    if (username === 'user' && password === 'password') {  // Replace with actual authentication check
-      // On successful login, navigate to the Appointment page
-      navigate('/appointment');
-    } else {
-      alert('Invalid login credentials');
+      // Check if the response is successful
+      if (response.ok) {
+        const data = await response.json();
+        localStorage.setItem('token', data.token); // Store token in local storage
+        navigate('/appointment'); // Redirect to the appointment page
+      } else {
+        // Handle incorrect credentials or other errors
+        const errorData = await response.json();
+        if (errorData.msg === 'Invalid credentials') {
+          alert('Invalid email or password. Please try again.');
+        } else {
+          alert(errorData.msg); // Display other error messages
+        }
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+      alert('An error occurred. Please try again later.');
     }
   };
-  return (
-    <div className="login-container">
-      <div className="login-box">
-        <h2>Login</h2>
-        <p className="login-text">Please fill in your credentials to login</p>
-        <form>
-          <div className="input-group">
-            <label htmlFor="username"></label>
-            <input type="text" id="username" name="username" placeholder='username' required />
-          </div>
-          <div className="input-group">
-            <label htmlFor="password"></label>
-            <input type="password" id="password" name="password" placeholder='password' required />
-          </div>
-          <button type="submit" className="login-button">Login</button>
-        </form>
-        {/* Centered 'or' text */}
-        <p className="or-text">or</p>
 
-        {/* Sign Up button */}
-        <Link to="/signup">
-          <button type="submit" className="signup-button">Signup</button>
-        </Link>
+  return (
+    <div className="loginpage">
+      <div className="login-container">
+        <div className="login-box">
+          <h1>Login</h1>
+          <form onSubmit={handleLogin}>
+            <div className="input-group">
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div className="input-group">
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+            <button type="submit" className="login-btn">Login</button>
+          </form>
+          <div className="signup-link">
+            Don't have an account? <Link to="/signup">Sign up</Link>
+          </div>
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default Login;

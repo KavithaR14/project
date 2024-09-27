@@ -20,15 +20,15 @@ const TimeSlotSelection = () => {
         setSelectedDate(date);
         setSelectedSlot(null);
     };
-
     const handleConfirmAppointment = () => {
         // Navigate to the Login page
         navigate('/login');
     };
 
     return (
+        <div className="time-slot-selctionpage">
         <div className="time-slot-selection">
-            <h2 className="heading">Select a Time Slot</h2>
+            <h2 className="head">Select a Time Slot</h2>
 
             {/* Date Selection */}
             <div className="date-selection">
@@ -73,6 +73,7 @@ const TimeSlotSelection = () => {
                     <p className="select-info">Please select a date to view available slots</p>
                 )}
             </div>
+        </div>
         </div>
     );
 };

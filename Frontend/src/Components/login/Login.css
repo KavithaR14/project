@@ -1,13 +1,11 @@
-
 /* src/Login.css */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  /* background: url('https://tu-dresden.de/gesundheit/ressourcen/bilder/Ganzheitliche_Vorsorge_panthermedia_B133282786_3455x3236.jpg/@@images/ac7e1948-0938-431e-9185-1ff0ce250ce6.jpeg') no-repeat center center fixed; */
-  background-size: cover;
-  image-rendering: crisp-edges;
+.loginpage {
   height: 100vh;
+  background-image: url("https://i.pinimg.com/564x/77/f3/8d/77f38d7dde4f63b9ab3c9db6094cef23.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background fixed */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,25 +15,28 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
+  height: 100%; /* Ensure the container takes the full height */
+  width: 100%; /* Ensure the container takes the full width */
+  margin-top: 20px;
+  margin-bottom: 100px;
 }
 
 .login-box {
-  background-color: rgb(255, 255, 255); /* Semi-transparent background */
+  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent background */
   padding: 30px;
   border-radius: 10px;
   width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  color: #2080b9;
+h1 {
+  color: #1e3a81;
   text-align: center;
 }
 
 .input-group {
   margin-bottom: 15px;
+  color: #1e3a81;
 }
 
 .input-group input {
@@ -47,54 +48,34 @@ h2 {
   font-size: 16px;
 }
 
-.login-button {
+.login-btn {
   width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: #2080b9;
-  color: white;
+  padding: 12px;
   font-size: 16px;
+  color: #fff;
+  background-color: #1e3a81; /* Theme color */
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-.login-button:hover {
-  background-color: #1e3a81;
+.login-btn:hover {
+  background-color: #2080b9; /* Darker theme color */
 }
 
-.or-text {
-  text-align: center;
-  margin: 20px 0;
-  font-size: 16px;
-  color: #000;
-}
-
-.signup-button {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: #2080b9;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.signup-button:hover {
-  background-color: #1e3a81;
-}
-
-a {
-  color: #2080b9; /* Link color based on theme */
-  text-decoration: none;
+.signup-link {
+  margin-top: 20px;
   font-size: 14px;
-  text-align: center;
-  display: block;
-  margin-top: 10px;
+  color: #000000; /* Theme color */
+  font-size: 1em;
 }
 
-a:hover {
-  color: #1e3a81;
+.signup-link a {
+  color: #1e3a81; /* Link color using theme */
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
 }

@@ -1,0 +1,63 @@
+.contact-container {
+    display: flex;
+    flex-direction: row-reverse; /* Content on the right, image on the left */
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height of the viewport */
+    margin-left: 0;/* Remove default margin */
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+.l-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    background-color: #f9f9f9; /* Optional background color */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.r-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-container h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: rgb(72, 72, 72); /* Increased font size for the main heading */
+    text-align: left;
+}
+
+.office-details h2, 
+.career-section h2 {
+    margin-top: 20px;
+    font-size: 1em; /* Adjusted font size for section headings */
+    color: rgb(72, 72, 72); 
+    text-align: left;
+}
+
+.office-details p, 
+.career-section p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #666666;
+}
+
+.career-section {
+    margin-bottom: 20px; /* Space below the career section */
+}
+
+.explore-jobs {
+    margin-top: 40px; /* Space above the button */
+}
+.contact-image {
+    width: 100%;
+    height: auto; /* Full height of the left container */
+    object-fit: cover; /* Ensures the image covers the container */
+    /* border-radius: 5px; Optional border radius */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    margin-top: 0;
+}

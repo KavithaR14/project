@@ -9,11 +9,14 @@
 
 .hero-content h1 {
   font-size: 3rem;
+  text-align: left;
+  color: white;
 }
 
 .hero-content p {
   font-size: 1.2rem;
   margin: 20px 0;
+  color: white;
 }
 
 .book-btn {
